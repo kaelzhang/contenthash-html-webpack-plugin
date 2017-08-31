@@ -1,7 +1,7 @@
 {
   "name": "contenthash-html-webpack-plugin",
-  "version": "1.0.0",
-  "description": "contenthash-html-webpack-plugin",
+  "version": "1.0.1",
+  "description": "Makes [contenthash] available for html-webpack-plugin",
   "main": "lib/index.js",
   "module": "src/index.js",
   "scripts": {
@@ -18,7 +18,14 @@
     "url": "git://github.com/kaelzhang/contenthash-html-webpack-plugin.git"
   },
   "keywords": [
-    "contenthash-html-webpack-plugin"
+    "contenthash-html-webpack-plugin",
+    "html-webpack-plugin",
+    "contenthash",
+    "content-hash",
+    "compiler",
+    "compilation",
+    "webpack-plugin",
+    "webpack"
   ],
   "engines": {
     "node": ">=4"
