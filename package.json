@@ -1,6 +1,6 @@
 {
   "name": "contenthash-html-webpack-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Makes [contenthash] available for html-webpack-plugin",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -61,7 +61,6 @@
     "codecov": "^2.3.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.23.0",
     "hash-replace": "^1.0.2"
   }
 }
