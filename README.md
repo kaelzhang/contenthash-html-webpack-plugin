@@ -15,18 +15,45 @@
 
 # contenthash-html-webpack-plugin
 
-<!-- description -->
+Makes `[contenthash]` available for [html-webpack-plugin](https://www.npmjs.com/package/html-webpack-plugin)
 
 ## Install
 
 ```sh
-$ npm install contenthash-html-webpack-plugin --save
+$ npm install contenthash-html-webpack-plugin --save-dev
 ```
 
 ## Usage
 
 ```js
-const contenthash_html_webpack_plugin = require('contenthash-html-webpack-plugin')
+import ContentHashHtmlPlugin from 'contenthash-html-webpack-plugin'
+import HtmlPlugin from 'html-webpack-plugin'
+
+const webpackConfig = {
+  ...,
+  plugins: [
+    new HtmlPlugin({
+      filename: `[file]-[contenthash:16].html`,
+      ...
+    }),
+    new ContentHashHtmlPlugin()
+  ]
+}
+
+// Then the file hash will be the hash of the file content
+```
+
+## Available Placeholder Format
+
+```js
+'[contenthash]'
+'[contenthash:7]'           // maxLength: 7
+'[md5:contenthash:hex]'     // hashType: md5, digestType: hex
+
+'[md5:contenthash:hex:7]'
+// hashType: md5
+// digestType: hex
+// maxLength: 7
 ```
 
 ## License
